@@ -20,8 +20,7 @@ class ProfileFields extends StatelessWidget {
         ),
         Theme(
           data: ThemeData(
-              primaryColor: Colors.blueGrey,
-              primaryColorDark: Colors.blueGrey),
+              primaryColor: Colors.blueGrey, primaryColorDark: Colors.blueGrey),
           child: Container(
             height: 25.0,
             child: TextField(

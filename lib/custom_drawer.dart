@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
-import 'video.dart';
-import 'profile.dart';
+import 'video/video.dart';
+import 'profile/profile.dart';
 
 class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,40 +11,47 @@ class CustomDrawer extends StatelessWidget {
       child: ListView(
         children: [
           DrawerHeader(
-            child: Text('Header Child'),
+            child: Text(''),
             decoration: BoxDecoration(
-              color: Colors.green[900],
+              color: Color(0xff1a322b),
             ),
           ),
           ListTile(
-              title: Text('Home'),
+              title: Text(
+                'Home',
+                style: TextStyle(fontSize: 18.0),
+              ),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) {
-                      return HomePage();
-                    }));
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return HomePage();
+                }));
+              }),
+          Divider(
+            thickness: 1.0,
+            color: Colors.black,
+          ),
+          ListTile(
+              title: Text(
+                'Videos',
+                style: TextStyle(fontSize: 18.0),
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Video();
+                }));
               }),
           Divider(
             thickness: 2.0,
           ),
           ListTile(
-              title: Text('Videos'),
+              title: Text(
+                'Profile',
+                style: TextStyle(fontSize: 18.0),
+              ),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) {
-                      return Video();
-                    }));
-              }),
-          Divider(
-            thickness: 2.0,
-          ),
-          ListTile(
-              title: Text('Profile'),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) {
-                      return Profile();
-                    }));
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Profile();
+                }));
               }),
         ],
       ),

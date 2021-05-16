@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
 
-class NewsContent extends StatelessWidget {
+class NewsContentVideo extends StatelessWidget {
   final String imageName;
   final String newsName;
-  final IconData iconName;
 
-  NewsContent({this.imageName, this.newsName, this.iconName});
+  NewsContentVideo({this.imageName, this.newsName});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.15,
+      height: MediaQuery.of(context).size.height * 0.10,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width * 0.25,
-            height: MediaQuery.of(context).size.height * 0.15,
+            width: MediaQuery.of(context).size.width * 0.30,
+            height: MediaQuery.of(context).size.height * 0.10,
             child: FittedBox(
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(15.0),
+                borderRadius: BorderRadius.circular(5.0),
                 child: Image(
                   image: AssetImage('assets/images/$imageName'),
                   fit: BoxFit.contain,
@@ -34,7 +33,7 @@ class NewsContent extends StatelessWidget {
           ),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -45,13 +44,6 @@ class NewsContent extends StatelessWidget {
                     //MediaQuery.of(context).size.height * 0.023,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Newsreader',
-                  ),
-                ),
-                Text(
-                  'This is the heading of the realte news this is another news',
-                  style: TextStyle(
-                    fontSize: 14.0, //MediaQuery.of(context).size.height * 0.02,
-                    color: Colors.grey[600],
                   ),
                 ),
                 Row(
@@ -80,11 +72,6 @@ class NewsContent extends StatelessWidget {
                             //MediaQuery.of(context).size.height * 0.023,
                             fontWeight: FontWeight.bold),
                       ),
-                    ),
-                    Icon(
-                      iconName,
-                      //Icons.bookmark_border_outlined,
-                      size: 20.0, //MediaQuery.of(context).size.height * 0.023,
                     ),
                   ],
                 )

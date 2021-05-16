@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'custom_drawer.dart';
+import '../custom_drawer.dart';
 import 'profile_fields.dart';
 
 class Profile extends StatelessWidget {
@@ -12,7 +12,7 @@ class Profile extends StatelessWidget {
       child: Scaffold(
           resizeToAvoidBottomInset: false,
           appBar: AppBar(
-            backgroundColor: Colors.green[900],
+            backgroundColor: Color(0xff1a322b),
           ),
           drawer: CustomDrawer(),
           body: Column(
@@ -21,7 +21,7 @@ class Profile extends StatelessWidget {
               Container(
                   height: MediaQuery.of(context).size.height * 0.3,
                   width: double.infinity,
-                  color: Colors.blueGrey[100],
+                  color: Color(0xfff3f3f3),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -30,19 +30,19 @@ class Profile extends StatelessWidget {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(imageRadius)),
                             border: Border.all(
-                              color: Colors.deepOrange,
+                              color: Color(0xffed6206),
                               width: 2.0,
                             )),
                         child: CircleAvatar(
-                          backgroundImage: AssetImage('assets/images/img_avatar.png'),
+                          backgroundImage:
+                              AssetImage('assets/images/img_avatar.png'),
                           radius: imageRadius,
-
                         ),
                       ),
                       Text(
                         'Dinesh Yaduvamshi',
                         style: TextStyle(
-                          color: Colors.deepOrange,
+                          color: Color(0xffed6206),
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -59,7 +59,7 @@ class Profile extends StatelessWidget {
                             child: Text(
                               'Edit profile',
                               style: TextStyle(
-                                color: Colors.deepOrange,
+                                color: Color(0xffed6206),
                                 fontSize: 12.0,
                               ),
                             )),
@@ -89,5 +89,3 @@ class Profile extends StatelessWidget {
     );
   }
 }
-
-
