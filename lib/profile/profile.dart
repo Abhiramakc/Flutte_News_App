@@ -48,8 +48,6 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        height: 25.0,
-                        width: 90.0,
                         child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:

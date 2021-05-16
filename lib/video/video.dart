@@ -80,12 +80,15 @@ class Video extends StatelessWidget {
                         ),
                       ),
                     ),
+
+                    NewsContentVideo(
+                        imageName: 'modi.jpg', newsName: 'Info'),
+
                     NewsContentVideo(
                         imageName: 'avengers.jpg', newsName: 'Info'),
+
                     NewsContentVideo(
-                        imageName: 'avengers.jpg', newsName: 'Info'),
-                    NewsContentVideo(
-                        imageName: 'avengers.jpg', newsName: 'Info'),
+                        imageName: 'kejrival.jpg', newsName: 'Info'),
                   ],
                 ),
               ),

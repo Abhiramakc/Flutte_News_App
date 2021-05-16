@@ -10,13 +10,13 @@ class NewsContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.15,
+      height: MediaQuery.of(context).size.height * 0.13,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width * 0.25,
+            width: MediaQuery.of(context).size.width * 0.3,
             height: MediaQuery.of(context).size.height * 0.15,
             child: FittedBox(
               child: ClipRRect(
@@ -30,7 +30,7 @@ class NewsContent extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 20.0,
+            width: 15.0,
           ),
           Expanded(
             child: Column(
@@ -42,7 +42,6 @@ class NewsContent extends StatelessWidget {
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     fontSize: 18.0,
-                    //MediaQuery.of(context).size.height * 0.023,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Newsreader',
                   ),
@@ -50,7 +49,7 @@ class NewsContent extends StatelessWidget {
                 Text(
                   'This is the heading of the realte news this is another news',
                   style: TextStyle(
-                    fontSize: 14.0, //MediaQuery.of(context).size.height * 0.02,
+                    fontSize: 14.0,
                     color: Colors.grey[600],
                   ),
                 ),
@@ -59,13 +58,14 @@ class NewsContent extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.calendar_today,
-                      size: 15.0, //MediaQuery.of(context).size.height * 0.023,
+                      size: 18.0, //14
+                      color: Colors.grey,
                     ),
                     Text(
                       '03-03-20',
                       style: TextStyle(
                         color: Colors.grey,
-                        //fontSize: MediaQuery.of(context).size.height * 0.023, //none
+                        fontSize: 16.0
                       ),
                     ),
                     Container(
@@ -77,14 +77,12 @@ class NewsContent extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.0,
-                            //MediaQuery.of(context).size.height * 0.023,
                             fontWeight: FontWeight.bold),
                       ),
                     ),
                     Icon(
                       iconName,
-                      //Icons.bookmark_border_outlined,
-                      size: 20.0, //MediaQuery.of(context).size.height * 0.023,
+                      size: 20.0,
                     ),
                   ],
                 )

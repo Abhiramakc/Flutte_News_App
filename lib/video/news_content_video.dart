@@ -15,7 +15,7 @@ class NewsContentVideo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width * 0.30,
+            width: MediaQuery.of(context).size.width * 0.35,
             height: MediaQuery.of(context).size.height * 0.10,
             child: FittedBox(
               child: ClipRRect(
@@ -29,7 +29,7 @@ class NewsContentVideo extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 20.0,
+            width: 15.0,
           ),
           Expanded(
             child: Column(
@@ -41,9 +41,7 @@ class NewsContentVideo extends StatelessWidget {
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     fontSize: 18.0,
-                    //MediaQuery.of(context).size.height * 0.023,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'Newsreader',
                   ),
                 ),
                 Row(
@@ -51,13 +49,14 @@ class NewsContentVideo extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.calendar_today,
-                      size: 15.0, //MediaQuery.of(context).size.height * 0.023,
+                      size: 18.0,
+                      color: Colors.grey,
                     ),
                     Text(
                       '03-03-20',
                       style: TextStyle(
                         color: Colors.grey,
-                        //fontSize: MediaQuery.of(context).size.height * 0.023, //none
+                        fontSize: 16.0
                       ),
                     ),
                     Container(
@@ -68,8 +67,7 @@ class NewsContentVideo extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 15.0,
-                            //MediaQuery.of(context).size.height * 0.023,
+                            fontSize: 18.0,
                             fontWeight: FontWeight.bold),
                       ),
                     ),
